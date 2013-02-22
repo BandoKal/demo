@@ -1,0 +1,30 @@
+StartViewController
+	Error when selecting contact (don't demo or pull from list instead of contacts?)
+	memberTable gets refreshed with appDelegate.members array
+	Add Group
+		Directs to Group page
+		Loads from a list of saved groups
+		Select group -> each member gets added to appDelegate.members array
+	Save New Group
+		Directs to SaveGroup page that allows you to title the group and save
+		Save -> on click saves group and dismissViewController
+			   changes "Save New Group" button to not be visible
+	Done
+		Starts the GKSession as host
+		Sends SMS message to each group member informing them of the app and new order up run
+
+View Current Order Ups
+	Table View with list of current order up runs in the area
+	loaded from GKSession criteria
+
+	Select Order
+		page displays information about specific order up
+		Add My Order -> directs to a page to add an order to the run
+			Add My Order -> adds order and member to the order run
+					       accepts the invitation
+					       saves order to appDelegate.orders dictionary/array
+
+View my Past Orders
+	Table View displaying past orders
+	Section 1: orders placed where you were host
+	Section 2: orders placed by you

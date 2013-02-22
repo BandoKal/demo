@@ -1,0 +1,808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		628F835916CBF03C00A5D29E /* FeedEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F835816CBF03C00A5D29E /* FeedEntry.m */; };
+		628F835B16CBF28900A5D29E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 628F835A16CBF28900A5D29E /* CoreLocation.framework */; };
+		681E985016D045C500EF7DB7 /* AddGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681E984F16D045C500EF7DB7 /* AddGroupTableViewController.m */; };
+		681E985616D0511400EF7DB7 /* SaveGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681E985516D0511400EF7DB7 /* SaveGroupViewController.m */; };
+		681E985916D05C6C00EF7DB7 /* ExistingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681E985816D05C6C00EF7DB7 /* ExistingTableViewController.m */; };
+		683E967116B7353F007906DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683E967016B7353F007906DB /* UIKit.framework */; };
+		683E967316B7353F007906DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683E967216B7353F007906DB /* Foundation.framework */; };
+		683E967516B7353F007906DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683E967416B7353F007906DB /* CoreGraphics.framework */; };
+		683E967716B7353F007906DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683E967616B7353F007906DB /* CoreData.framework */; };
+		683E967D16B7353F007906DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 683E967B16B7353F007906DB /* InfoPlist.strings */; };
+		683E967F16B7353F007906DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 683E967E16B7353F007906DB /* main.m */; };
+		683E968316B7353F007906DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 683E968216B7353F007906DB /* AppDelegate.m */; };
+		683E968516B7353F007906DB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 683E968416B7353F007906DB /* Default.png */; };
+		683E968716B7353F007906DB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 683E968616B7353F007906DB /* Default@2x.png */; };
+		683E968916B7353F007906DB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 683E968816B7353F007906DB /* Default-568h@2x.png */; };
+		683E968C16B7353F007906DB /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683E968A16B7353F007906DB /* MainStoryboard_iPhone.storyboard */; };
+		683E968F16B7353F007906DB /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683E968D16B7353F007906DB /* MainStoryboard_iPad.storyboard */; };
+		683E969216B7353F007906DB /* Deloitte_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 683E969016B7353F007906DB /* Deloitte_Challenge.xcdatamodeld */; };
+		683E96A016B73540007906DB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683E969F16B73540007906DB /* SenTestingKit.framework */; };
+		683E96A116B73540007906DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683E967016B7353F007906DB /* UIKit.framework */; };
+		683E96A216B73540007906DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683E967216B7353F007906DB /* Foundation.framework */; };
+		683E96A316B73540007906DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683E967616B7353F007906DB /* CoreData.framework */; };
+		683E96AB16B73540007906DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 683E96A916B73540007906DB /* InfoPlist.strings */; };
+		683E96AE16B73540007906DB /* Deloitte_ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 683E96AD16B73540007906DB /* Deloitte_ChallengeTests.m */; };
+		683E96D016B7382E007906DB /* Action_Man.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 683E96C416B7382E007906DB /* Action_Man.ttf */; };
+		683E96D416B73921007906DB /* UIFont+DeloitteAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 683E96D316B73921007906DB /* UIFont+DeloitteAdditions.m */; };
+		683E96D716B73A41007906DB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 683E96D616B73A41007906DB /* MainViewController.m */; };
+		683E96E116B740AF007906DB /* UIButton+DeloitteAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 683E96E016B740AF007906DB /* UIButton+DeloitteAdditions.m */; };
+		6845A19E16CE895D00A043D0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6845A19D16CE895D00A043D0 /* AddressBook.framework */; };
+		6845A1A116CE896300A043D0 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6845A1A016CE896300A043D0 /* AddressBookUI.framework */; };
+		6845A1A816CFFDA400A043D0 /* RSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6845A1A716CFFDA400A043D0 /* RSSViewController.m */; };
+		688C16CA16BF4ADB004EFFC3 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 688C16C916BF4ADB004EFFC3 /* CreateViewController.m */; };
+		688C16CD16BF54C5004EFFC3 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 688C16CC16BF54C5004EFFC3 /* StartViewController.m */; };
+		688C16DC16BFFE9A004EFFC3 /* UIBarButtonItem+WEPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 688C16DB16BFFE9A004EFFC3 /* UIBarButtonItem+WEPopover.m */; };
+		688C16DE16C0000F004EFFC3 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 688C16DD16C0000F004EFFC3 /* LICENSE.txt */; };
+		688C16E416C001C0004EFFC3 /* WEPopoverContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 688C16E316C001C0004EFFC3 /* WEPopoverContainerView.m */; };
+		688C16E716C0032D004EFFC3 /* WEPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 688C16E616C0032D004EFFC3 /* WEPopoverController.m */; };
+		688C16EB16C003E1004EFFC3 /* WETouchableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 688C16EA16C003E1004EFFC3 /* WETouchableView.m */; };
+		688C16FC16C006B6004EFFC3 /* popoverArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16ED16C006B6004EFFC3 /* popoverArrowDown.png */; };
+		688C16FD16C006B6004EFFC3 /* popoverArrowDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16EE16C006B6004EFFC3 /* popoverArrowDown@2x.png */; };
+		688C16FE16C006B6004EFFC3 /* popoverArrowDownSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16EF16C006B6004EFFC3 /* popoverArrowDownSimple.png */; };
+		688C16FF16C006B6004EFFC3 /* popoverArrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16F016C006B6004EFFC3 /* popoverArrowLeft.png */; };
+		688C170016C006B6004EFFC3 /* popoverArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16F116C006B6004EFFC3 /* popoverArrowLeft@2x.png */; };
+		688C170116C006B6004EFFC3 /* popoverArrowLeftSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16F216C006B6004EFFC3 /* popoverArrowLeftSimple.png */; };
+		688C170216C006B6004EFFC3 /* popoverArrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16F316C006B6004EFFC3 /* popoverArrowRight.png */; };
+		688C170316C006B6004EFFC3 /* popoverArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16F416C006B6004EFFC3 /* popoverArrowRight@2x.png */; };
+		688C170416C006B6004EFFC3 /* popoverArrowRightSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16F516C006B6004EFFC3 /* popoverArrowRightSimple.png */; };
+		688C170516C006B6004EFFC3 /* popoverArrowUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16F616C006B6004EFFC3 /* popoverArrowUp.png */; };
+		688C170616C006B6004EFFC3 /* popoverArrowUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16F716C006B6004EFFC3 /* popoverArrowUp@2x.png */; };
+		688C170716C006B6004EFFC3 /* popoverArrowUpSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16F816C006B6004EFFC3 /* popoverArrowUpSimple.png */; };
+		688C170816C006B6004EFFC3 /* popoverBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16F916C006B6004EFFC3 /* popoverBg.png */; };
+		688C170916C006B6004EFFC3 /* popoverBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16FA16C006B6004EFFC3 /* popoverBg@2x.png */; };
+		688C170A16C006B6004EFFC3 /* popoverBgSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C16FB16C006B6004EFFC3 /* popoverBgSimple.png */; };
+		688C170D16C00C86004EFFC3 /* WEPopoverContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 688C170C16C00C86004EFFC3 /* WEPopoverContentViewController.m */; };
+		688C171116C01FFF004EFFC3 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 688C171016C01FFF004EFFC3 /* Member.m */; };
+		688C171416C02027004EFFC3 /* OrderUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 688C171316C02027004EFFC3 /* OrderUp.m */; };
+		68B123F216D32D770056F615 /* PastOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B123F116D32D770056F615 /* PastOrdersTableViewController.m */; };
+		68B123F516D3315F0056F615 /* PastOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B123F416D3315F0056F615 /* PastOrder.m */; };
+		68C7511416BC03A30036E16A /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C7511316BC03A30036E16A /* gradient.png */; };
+		68C7511716BC03B10036E16A /* order_up_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C7511616BC03B10036E16A /* order_up_logo.png */; };
+		68C7511B16BC06790036E16A /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C7511916BC06790036E16A /* Button.png */; };
+		68C7511C16BC06790036E16A /* ButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C7511A16BC06790036E16A /* ButtonPressed.png */; };
+		9654663916D33780001AF47F /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9654663816D33780001AF47F /* MessageViewController.m */; };
+		9676BF7516D2FD5D0084530E /* CurrentOrderUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9676BF7416D2FD5D0084530E /* CurrentOrderUpViewController.m */; };
+		9676BF7816D32D560084530E /* CurrentHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9676BF7716D32D560084530E /* CurrentHostViewController.m */; };
+		968E612516CB435E0077F108 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968E612416CB435E0077F108 /* GameKit.framework */; };
+		968E612816CB43B40077F108 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E612716CB43B40077F108 /* SessionManager.m */; };
+		968E612B16CB43C90077F108 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E612A16CB43C90077F108 /* XMLParser.m */; };
+		968E612E16CB4C870077F108 /* DataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E612D16CB4C870077F108 /* DataFetcher.m */; };
+		969640E416D34C2900CE471D /* PlaceOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969640E316D34C2900CE471D /* PlaceOrderViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		683E96A416B73540007906DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 683E966316B7353F007906DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 683E966B16B7353F007906DB;
+			remoteInfo = "Deloitte Challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		628F835716CBF03C00A5D29E /* FeedEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedEntry.h; sourceTree = "<group>"; };
+		628F835816CBF03C00A5D29E /* FeedEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedEntry.m; sourceTree = "<group>"; };
+		628F835A16CBF28900A5D29E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		681E984E16D045C500EF7DB7 /* AddGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGroupTableViewController.h; sourceTree = "<group>"; };
+		681E984F16D045C500EF7DB7 /* AddGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGroupTableViewController.m; sourceTree = "<group>"; };
+		681E985416D0511400EF7DB7 /* SaveGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveGroupViewController.h; sourceTree = "<group>"; };
+		681E985516D0511400EF7DB7 /* SaveGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveGroupViewController.m; sourceTree = "<group>"; };
+		681E985716D05C6C00EF7DB7 /* ExistingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExistingTableViewController.h; sourceTree = "<group>"; };
+		681E985816D05C6C00EF7DB7 /* ExistingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExistingTableViewController.m; sourceTree = "<group>"; };
+		683E966C16B7353F007906DB /* Deloitte Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deloitte Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		683E967016B7353F007906DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		683E967216B7353F007906DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		683E967416B7353F007906DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		683E967616B7353F007906DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		683E967A16B7353F007906DB /* Deloitte Challenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Deloitte Challenge-Info.plist"; sourceTree = "<group>"; };
+		683E967C16B7353F007906DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		683E967E16B7353F007906DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		683E968016B7353F007906DB /* Deloitte Challenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deloitte Challenge-Prefix.pch"; sourceTree = "<group>"; };
+		683E968116B7353F007906DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		683E968216B7353F007906DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		683E968416B7353F007906DB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		683E968616B7353F007906DB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		683E968816B7353F007906DB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		683E968B16B7353F007906DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		683E968E16B7353F007906DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		683E969116B7353F007906DB /* Deloitte_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Deloitte_Challenge.xcdatamodel; sourceTree = "<group>"; };
+		683E969E16B73540007906DB /* Deloitte ChallengeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deloitte ChallengeTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		683E969F16B73540007906DB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		683E96A816B73540007906DB /* Deloitte ChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Deloitte ChallengeTests-Info.plist"; sourceTree = "<group>"; };
+		683E96AA16B73540007906DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		683E96AC16B73540007906DB /* Deloitte_ChallengeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Deloitte_ChallengeTests.h; sourceTree = "<group>"; };
+		683E96AD16B73540007906DB /* Deloitte_ChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Deloitte_ChallengeTests.m; sourceTree = "<group>"; };
+		683E96C416B7382E007906DB /* Action_Man.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Action_Man.ttf; path = action_man/Action_Man.ttf; sourceTree = "<group>"; };
+		683E96D216B73921007906DB /* UIFont+DeloitteAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+DeloitteAdditions.h"; sourceTree = "<group>"; };
+		683E96D316B73921007906DB /* UIFont+DeloitteAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+DeloitteAdditions.m"; sourceTree = "<group>"; };
+		683E96D516B73A41007906DB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		683E96D616B73A41007906DB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		683E96DF16B740AF007906DB /* UIButton+DeloitteAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DeloitteAdditions.h"; sourceTree = "<group>"; };
+		683E96E016B740AF007906DB /* UIButton+DeloitteAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DeloitteAdditions.m"; sourceTree = "<group>"; };
+		6845A19D16CE895D00A043D0 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		6845A1A016CE896300A043D0 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		6845A1A616CFFDA400A043D0 /* RSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSViewController.h; sourceTree = "<group>"; };
+		6845A1A716CFFDA400A043D0 /* RSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSViewController.m; sourceTree = "<group>"; };
+		688C16C816BF4ADB004EFFC3 /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
+		688C16C916BF4ADB004EFFC3 /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
+		688C16CB16BF54C5004EFFC3 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		688C16CC16BF54C5004EFFC3 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		688C16DA16BFFE9A004EFFC3 /* UIBarButtonItem+WEPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WEPopover.h"; sourceTree = "<group>"; };
+		688C16DB16BFFE9A004EFFC3 /* UIBarButtonItem+WEPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WEPopover.m"; sourceTree = "<group>"; };
+		688C16DD16C0000F004EFFC3 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		688C16E216C001C0004EFFC3 /* WEPopoverContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEPopoverContainerView.h; sourceTree = "<group>"; };
+		688C16E316C001C0004EFFC3 /* WEPopoverContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEPopoverContainerView.m; sourceTree = "<group>"; };
+		688C16E516C0032D004EFFC3 /* WEPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEPopoverController.h; sourceTree = "<group>"; };
+		688C16E616C0032D004EFFC3 /* WEPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEPopoverController.m; sourceTree = "<group>"; };
+		688C16E816C0039F004EFFC3 /* WEPopoverParentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WEPopoverParentView.h; sourceTree = "<group>"; };
+		688C16E916C003E1004EFFC3 /* WETouchableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WETouchableView.h; sourceTree = "<group>"; };
+		688C16EA16C003E1004EFFC3 /* WETouchableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WETouchableView.m; sourceTree = "<group>"; };
+		688C16ED16C006B6004EFFC3 /* popoverArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowDown.png; sourceTree = "<group>"; };
+		688C16EE16C006B6004EFFC3 /* popoverArrowDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverArrowDown@2x.png"; sourceTree = "<group>"; };
+		688C16EF16C006B6004EFFC3 /* popoverArrowDownSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowDownSimple.png; sourceTree = "<group>"; };
+		688C16F016C006B6004EFFC3 /* popoverArrowLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowLeft.png; sourceTree = "<group>"; };
+		688C16F116C006B6004EFFC3 /* popoverArrowLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverArrowLeft@2x.png"; sourceTree = "<group>"; };
+		688C16F216C006B6004EFFC3 /* popoverArrowLeftSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowLeftSimple.png; sourceTree = "<group>"; };
+		688C16F316C006B6004EFFC3 /* popoverArrowRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowRight.png; sourceTree = "<group>"; };
+		688C16F416C006B6004EFFC3 /* popoverArrowRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverArrowRight@2x.png"; sourceTree = "<group>"; };
+		688C16F516C006B6004EFFC3 /* popoverArrowRightSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowRightSimple.png; sourceTree = "<group>"; };
+		688C16F616C006B6004EFFC3 /* popoverArrowUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowUp.png; sourceTree = "<group>"; };
+		688C16F716C006B6004EFFC3 /* popoverArrowUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverArrowUp@2x.png"; sourceTree = "<group>"; };
+		688C16F816C006B6004EFFC3 /* popoverArrowUpSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowUpSimple.png; sourceTree = "<group>"; };
+		688C16F916C006B6004EFFC3 /* popoverBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverBg.png; sourceTree = "<group>"; };
+		688C16FA16C006B6004EFFC3 /* popoverBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverBg@2x.png"; sourceTree = "<group>"; };
+		688C16FB16C006B6004EFFC3 /* popoverBgSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverBgSimple.png; sourceTree = "<group>"; };
+		688C170B16C00C86004EFFC3 /* WEPopoverContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEPopoverContentViewController.h; sourceTree = "<group>"; };
+		688C170C16C00C86004EFFC3 /* WEPopoverContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEPopoverContentViewController.m; sourceTree = "<group>"; };
+		688C170F16C01FFF004EFFC3 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
+		688C171016C01FFF004EFFC3 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
+		688C171216C02027004EFFC3 /* OrderUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderUp.h; sourceTree = "<group>"; };
+		688C171316C02027004EFFC3 /* OrderUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderUp.m; sourceTree = "<group>"; };
+		68B123F016D32D770056F615 /* PastOrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastOrdersTableViewController.h; sourceTree = "<group>"; };
+		68B123F116D32D770056F615 /* PastOrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastOrdersTableViewController.m; sourceTree = "<group>"; };
+		68B123F316D3315F0056F615 /* PastOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastOrder.h; sourceTree = "<group>"; };
+		68B123F416D3315F0056F615 /* PastOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastOrder.m; sourceTree = "<group>"; };
+		68C7511316BC03A30036E16A /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
+		68C7511616BC03B10036E16A /* order_up_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = order_up_logo.png; sourceTree = "<group>"; };
+		68C7511916BC06790036E16A /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
+		68C7511A16BC06790036E16A /* ButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonPressed.png; sourceTree = "<group>"; };
+		9654663716D33780001AF47F /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		9654663816D33780001AF47F /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		9676BF7316D2FD5D0084530E /* CurrentOrderUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentOrderUpViewController.h; sourceTree = "<group>"; };
+		9676BF7416D2FD5D0084530E /* CurrentOrderUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentOrderUpViewController.m; sourceTree = "<group>"; };
+		9676BF7616D32D560084530E /* CurrentHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentHostViewController.h; sourceTree = "<group>"; };
+		9676BF7716D32D560084530E /* CurrentHostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentHostViewController.m; sourceTree = "<group>"; };
+		968E612416CB435E0077F108 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		968E612616CB43B40077F108 /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
+		968E612716CB43B40077F108 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
+		968E612916CB43C90077F108 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		968E612A16CB43C90077F108 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
+		968E612C16CB4C870077F108 /* DataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFetcher.h; sourceTree = "<group>"; };
+		968E612D16CB4C870077F108 /* DataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFetcher.m; sourceTree = "<group>"; };
+		969640E216D34C2900CE471D /* PlaceOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceOrderViewController.h; sourceTree = "<group>"; };
+		969640E316D34C2900CE471D /* PlaceOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceOrderViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		683E966916B7353F007906DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6845A1A116CE896300A043D0 /* AddressBookUI.framework in Frameworks */,
+				6845A19E16CE895D00A043D0 /* AddressBook.framework in Frameworks */,
+				628F835B16CBF28900A5D29E /* CoreLocation.framework in Frameworks */,
+				968E612516CB435E0077F108 /* GameKit.framework in Frameworks */,
+				683E967116B7353F007906DB /* UIKit.framework in Frameworks */,
+				683E967316B7353F007906DB /* Foundation.framework in Frameworks */,
+				683E967516B7353F007906DB /* CoreGraphics.framework in Frameworks */,
+				683E967716B7353F007906DB /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		683E969A16B73540007906DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				683E96A016B73540007906DB /* SenTestingKit.framework in Frameworks */,
+				683E96A116B73540007906DB /* UIKit.framework in Frameworks */,
+				683E96A216B73540007906DB /* Foundation.framework in Frameworks */,
+				683E96A316B73540007906DB /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		683E966116B7353F007906DB = {
+			isa = PBXGroup;
+			children = (
+				683E96DF16B740AF007906DB /* UIButton+DeloitteAdditions.h */,
+				683E96E016B740AF007906DB /* UIButton+DeloitteAdditions.m */,
+				683E96D216B73921007906DB /* UIFont+DeloitteAdditions.h */,
+				683E96D316B73921007906DB /* UIFont+DeloitteAdditions.m */,
+				683E967816B7353F007906DB /* Deloitte Challenge */,
+				683E96A616B73540007906DB /* Deloitte ChallengeTests */,
+				683E966F16B7353F007906DB /* Frameworks */,
+				683E966D16B7353F007906DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		683E966D16B7353F007906DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				683E966C16B7353F007906DB /* Deloitte Challenge.app */,
+				683E969E16B73540007906DB /* Deloitte ChallengeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		683E966F16B7353F007906DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6845A1A016CE896300A043D0 /* AddressBookUI.framework */,
+				6845A19D16CE895D00A043D0 /* AddressBook.framework */,
+				628F835A16CBF28900A5D29E /* CoreLocation.framework */,
+				968E612416CB435E0077F108 /* GameKit.framework */,
+				683E967016B7353F007906DB /* UIKit.framework */,
+				683E967216B7353F007906DB /* Foundation.framework */,
+				683E967416B7353F007906DB /* CoreGraphics.framework */,
+				683E967616B7353F007906DB /* CoreData.framework */,
+				683E969F16B73540007906DB /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		683E967816B7353F007906DB /* Deloitte Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				968E612316CB43450077F108 /* Model */,
+				688C170E16C01FD5004EFFC3 /* Utility Classes */,
+				683E968116B7353F007906DB /* AppDelegate.h */,
+				683E968216B7353F007906DB /* AppDelegate.m */,
+				683E968A16B7353F007906DB /* MainStoryboard_iPhone.storyboard */,
+				683E968D16B7353F007906DB /* MainStoryboard_iPad.storyboard */,
+				68C7511D16BC1EB70036E16A /* View */,
+				688C16D916BFFE41004EFFC3 /* Popover */,
+				68C7511816BC06630036E16A /* Images */,
+				683E967916B7353F007906DB /* Supporting Files */,
+			);
+			path = "Deloitte Challenge";
+			sourceTree = "<group>";
+		};
+		683E967916B7353F007906DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				683E96C416B7382E007906DB /* Action_Man.ttf */,
+				683E967A16B7353F007906DB /* Deloitte Challenge-Info.plist */,
+				683E967B16B7353F007906DB /* InfoPlist.strings */,
+				683E967E16B7353F007906DB /* main.m */,
+				683E968016B7353F007906DB /* Deloitte Challenge-Prefix.pch */,
+				683E968416B7353F007906DB /* Default.png */,
+				683E968616B7353F007906DB /* Default@2x.png */,
+				683E968816B7353F007906DB /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		683E96A616B73540007906DB /* Deloitte ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				683E96AC16B73540007906DB /* Deloitte_ChallengeTests.h */,
+				683E96AD16B73540007906DB /* Deloitte_ChallengeTests.m */,
+				683E96A716B73540007906DB /* Supporting Files */,
+			);
+			path = "Deloitte ChallengeTests";
+			sourceTree = "<group>";
+		};
+		683E96A716B73540007906DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				683E96A816B73540007906DB /* Deloitte ChallengeTests-Info.plist */,
+				683E96A916B73540007906DB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		688C16D916BFFE41004EFFC3 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				688C170B16C00C86004EFFC3 /* WEPopoverContentViewController.h */,
+				688C170C16C00C86004EFFC3 /* WEPopoverContentViewController.m */,
+				688C16EC16C00460004EFFC3 /* Popover Images */,
+				688C16DD16C0000F004EFFC3 /* LICENSE.txt */,
+				688C16DA16BFFE9A004EFFC3 /* UIBarButtonItem+WEPopover.h */,
+				688C16DB16BFFE9A004EFFC3 /* UIBarButtonItem+WEPopover.m */,
+				688C16E216C001C0004EFFC3 /* WEPopoverContainerView.h */,
+				688C16E316C001C0004EFFC3 /* WEPopoverContainerView.m */,
+				688C16E516C0032D004EFFC3 /* WEPopoverController.h */,
+				688C16E616C0032D004EFFC3 /* WEPopoverController.m */,
+				688C16E816C0039F004EFFC3 /* WEPopoverParentView.h */,
+				688C16E916C003E1004EFFC3 /* WETouchableView.h */,
+				688C16EA16C003E1004EFFC3 /* WETouchableView.m */,
+			);
+			name = Popover;
+			sourceTree = "<group>";
+		};
+		688C16EC16C00460004EFFC3 /* Popover Images */ = {
+			isa = PBXGroup;
+			children = (
+				688C16ED16C006B6004EFFC3 /* popoverArrowDown.png */,
+				688C16EE16C006B6004EFFC3 /* popoverArrowDown@2x.png */,
+				688C16EF16C006B6004EFFC3 /* popoverArrowDownSimple.png */,
+				688C16F016C006B6004EFFC3 /* popoverArrowLeft.png */,
+				688C16F116C006B6004EFFC3 /* popoverArrowLeft@2x.png */,
+				688C16F216C006B6004EFFC3 /* popoverArrowLeftSimple.png */,
+				688C16F316C006B6004EFFC3 /* popoverArrowRight.png */,
+				688C16F416C006B6004EFFC3 /* popoverArrowRight@2x.png */,
+				688C16F516C006B6004EFFC3 /* popoverArrowRightSimple.png */,
+				688C16F616C006B6004EFFC3 /* popoverArrowUp.png */,
+				688C16F716C006B6004EFFC3 /* popoverArrowUp@2x.png */,
+				688C16F816C006B6004EFFC3 /* popoverArrowUpSimple.png */,
+				688C16F916C006B6004EFFC3 /* popoverBg.png */,
+				688C16FA16C006B6004EFFC3 /* popoverBg@2x.png */,
+				688C16FB16C006B6004EFFC3 /* popoverBgSimple.png */,
+			);
+			name = "Popover Images";
+			sourceTree = "<group>";
+		};
+		688C170E16C01FD5004EFFC3 /* Utility Classes */ = {
+			isa = PBXGroup;
+			children = (
+				688C170F16C01FFF004EFFC3 /* Member.h */,
+				688C171016C01FFF004EFFC3 /* Member.m */,
+				688C171216C02027004EFFC3 /* OrderUp.h */,
+				688C171316C02027004EFFC3 /* OrderUp.m */,
+				628F835716CBF03C00A5D29E /* FeedEntry.h */,
+				628F835816CBF03C00A5D29E /* FeedEntry.m */,
+				68B123F316D3315F0056F615 /* PastOrder.h */,
+				68B123F416D3315F0056F615 /* PastOrder.m */,
+			);
+			name = "Utility Classes";
+			sourceTree = "<group>";
+		};
+		68C7511816BC06630036E16A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				68C7511916BC06790036E16A /* Button.png */,
+				68C7511A16BC06790036E16A /* ButtonPressed.png */,
+				68C7511616BC03B10036E16A /* order_up_logo.png */,
+				68C7511316BC03A30036E16A /* gradient.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		68C7511D16BC1EB70036E16A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				683E96D516B73A41007906DB /* MainViewController.h */,
+				683E96D616B73A41007906DB /* MainViewController.m */,
+				688C16C816BF4ADB004EFFC3 /* CreateViewController.h */,
+				688C16C916BF4ADB004EFFC3 /* CreateViewController.m */,
+				688C16CB16BF54C5004EFFC3 /* StartViewController.h */,
+				688C16CC16BF54C5004EFFC3 /* StartViewController.m */,
+				6845A1A616CFFDA400A043D0 /* RSSViewController.h */,
+				6845A1A716CFFDA400A043D0 /* RSSViewController.m */,
+				681E984E16D045C500EF7DB7 /* AddGroupTableViewController.h */,
+				681E984F16D045C500EF7DB7 /* AddGroupTableViewController.m */,
+				681E985416D0511400EF7DB7 /* SaveGroupViewController.h */,
+				681E985516D0511400EF7DB7 /* SaveGroupViewController.m */,
+				681E985716D05C6C00EF7DB7 /* ExistingTableViewController.h */,
+				681E985816D05C6C00EF7DB7 /* ExistingTableViewController.m */,
+				9676BF7316D2FD5D0084530E /* CurrentOrderUpViewController.h */,
+				9676BF7416D2FD5D0084530E /* CurrentOrderUpViewController.m */,
+				9676BF7616D32D560084530E /* CurrentHostViewController.h */,
+				9676BF7716D32D560084530E /* CurrentHostViewController.m */,
+				969640E216D34C2900CE471D /* PlaceOrderViewController.h */,
+				969640E316D34C2900CE471D /* PlaceOrderViewController.m */,
+				9654663716D33780001AF47F /* MessageViewController.h */,
+				9654663816D33780001AF47F /* MessageViewController.m */,
+				68B123F016D32D770056F615 /* PastOrdersTableViewController.h */,
+				68B123F116D32D770056F615 /* PastOrdersTableViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		968E612316CB43450077F108 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				683E969016B7353F007906DB /* Deloitte_Challenge.xcdatamodeld */,
+				968E612616CB43B40077F108 /* SessionManager.h */,
+				968E612716CB43B40077F108 /* SessionManager.m */,
+				968E612916CB43C90077F108 /* XMLParser.h */,
+				968E612A16CB43C90077F108 /* XMLParser.m */,
+				968E612C16CB4C870077F108 /* DataFetcher.h */,
+				968E612D16CB4C870077F108 /* DataFetcher.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		683E966B16B7353F007906DB /* Deloitte Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 683E96B116B73540007906DB /* Build configuration list for PBXNativeTarget "Deloitte Challenge" */;
+			buildPhases = (
+				683E966816B7353F007906DB /* Sources */,
+				683E966916B7353F007906DB /* Frameworks */,
+				683E966A16B7353F007906DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Deloitte Challenge";
+			productName = "Deloitte Challenge";
+			productReference = 683E966C16B7353F007906DB /* Deloitte Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		683E969D16B73540007906DB /* Deloitte ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 683E96B416B73540007906DB /* Build configuration list for PBXNativeTarget "Deloitte ChallengeTests" */;
+			buildPhases = (
+				683E969916B73540007906DB /* Sources */,
+				683E969A16B73540007906DB /* Frameworks */,
+				683E969B16B73540007906DB /* Resources */,
+				683E969C16B73540007906DB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				683E96A516B73540007906DB /* PBXTargetDependency */,
+			);
+			name = "Deloitte ChallengeTests";
+			productName = "Deloitte ChallengeTests";
+			productReference = 683E969E16B73540007906DB /* Deloitte ChallengeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		683E966316B7353F007906DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = MTSU;
+			};
+			buildConfigurationList = 683E966616B7353F007906DB /* Build configuration list for PBXProject "Deloitte Challenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 683E966116B7353F007906DB;
+			productRefGroup = 683E966D16B7353F007906DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				683E966B16B7353F007906DB /* Deloitte Challenge */,
+				683E969D16B73540007906DB /* Deloitte ChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		683E966A16B7353F007906DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				683E967D16B7353F007906DB /* InfoPlist.strings in Resources */,
+				683E968516B7353F007906DB /* Default.png in Resources */,
+				683E968716B7353F007906DB /* Default@2x.png in Resources */,
+				683E968916B7353F007906DB /* Default-568h@2x.png in Resources */,
+				683E968C16B7353F007906DB /* MainStoryboard_iPhone.storyboard in Resources */,
+				683E968F16B7353F007906DB /* MainStoryboard_iPad.storyboard in Resources */,
+				683E96D016B7382E007906DB /* Action_Man.ttf in Resources */,
+				68C7511416BC03A30036E16A /* gradient.png in Resources */,
+				68C7511716BC03B10036E16A /* order_up_logo.png in Resources */,
+				68C7511B16BC06790036E16A /* Button.png in Resources */,
+				68C7511C16BC06790036E16A /* ButtonPressed.png in Resources */,
+				688C16DE16C0000F004EFFC3 /* LICENSE.txt in Resources */,
+				688C16FC16C006B6004EFFC3 /* popoverArrowDown.png in Resources */,
+				688C16FD16C006B6004EFFC3 /* popoverArrowDown@2x.png in Resources */,
+				688C16FE16C006B6004EFFC3 /* popoverArrowDownSimple.png in Resources */,
+				688C16FF16C006B6004EFFC3 /* popoverArrowLeft.png in Resources */,
+				688C170016C006B6004EFFC3 /* popoverArrowLeft@2x.png in Resources */,
+				688C170116C006B6004EFFC3 /* popoverArrowLeftSimple.png in Resources */,
+				688C170216C006B6004EFFC3 /* popoverArrowRight.png in Resources */,
+				688C170316C006B6004EFFC3 /* popoverArrowRight@2x.png in Resources */,
+				688C170416C006B6004EFFC3 /* popoverArrowRightSimple.png in Resources */,
+				688C170516C006B6004EFFC3 /* popoverArrowUp.png in Resources */,
+				688C170616C006B6004EFFC3 /* popoverArrowUp@2x.png in Resources */,
+				688C170716C006B6004EFFC3 /* popoverArrowUpSimple.png in Resources */,
+				688C170816C006B6004EFFC3 /* popoverBg.png in Resources */,
+				688C170916C006B6004EFFC3 /* popoverBg@2x.png in Resources */,
+				688C170A16C006B6004EFFC3 /* popoverBgSimple.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		683E969B16B73540007906DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				683E96AB16B73540007906DB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		683E969C16B73540007906DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		683E966816B7353F007906DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				683E967F16B7353F007906DB /* main.m in Sources */,
+				683E968316B7353F007906DB /* AppDelegate.m in Sources */,
+				683E969216B7353F007906DB /* Deloitte_Challenge.xcdatamodeld in Sources */,
+				683E96D416B73921007906DB /* UIFont+DeloitteAdditions.m in Sources */,
+				683E96D716B73A41007906DB /* MainViewController.m in Sources */,
+				683E96E116B740AF007906DB /* UIButton+DeloitteAdditions.m in Sources */,
+				688C16CA16BF4ADB004EFFC3 /* CreateViewController.m in Sources */,
+				688C16CD16BF54C5004EFFC3 /* StartViewController.m in Sources */,
+				688C16DC16BFFE9A004EFFC3 /* UIBarButtonItem+WEPopover.m in Sources */,
+				688C16E416C001C0004EFFC3 /* WEPopoverContainerView.m in Sources */,
+				688C16E716C0032D004EFFC3 /* WEPopoverController.m in Sources */,
+				688C16EB16C003E1004EFFC3 /* WETouchableView.m in Sources */,
+				688C170D16C00C86004EFFC3 /* WEPopoverContentViewController.m in Sources */,
+				688C171116C01FFF004EFFC3 /* Member.m in Sources */,
+				688C171416C02027004EFFC3 /* OrderUp.m in Sources */,
+				968E612816CB43B40077F108 /* SessionManager.m in Sources */,
+				968E612B16CB43C90077F108 /* XMLParser.m in Sources */,
+				968E612E16CB4C870077F108 /* DataFetcher.m in Sources */,
+				628F835916CBF03C00A5D29E /* FeedEntry.m in Sources */,
+				6845A1A816CFFDA400A043D0 /* RSSViewController.m in Sources */,
+				681E985016D045C500EF7DB7 /* AddGroupTableViewController.m in Sources */,
+				681E985616D0511400EF7DB7 /* SaveGroupViewController.m in Sources */,
+				681E985916D05C6C00EF7DB7 /* ExistingTableViewController.m in Sources */,
+				9676BF7516D2FD5D0084530E /* CurrentOrderUpViewController.m in Sources */,
+				9676BF7816D32D560084530E /* CurrentHostViewController.m in Sources */,
+				9654663916D33780001AF47F /* MessageViewController.m in Sources */,
+				68B123F216D32D770056F615 /* PastOrdersTableViewController.m in Sources */,
+				68B123F516D3315F0056F615 /* PastOrder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		683E969916B73540007906DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				683E96AE16B73540007906DB /* Deloitte_ChallengeTests.m in Sources */,
+				969640E416D34C2900CE471D /* PlaceOrderViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		683E96A516B73540007906DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 683E966B16B7353F007906DB /* Deloitte Challenge */;
+			targetProxy = 683E96A416B73540007906DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		683E967B16B7353F007906DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				683E967C16B7353F007906DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		683E968A16B7353F007906DB /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				683E968B16B7353F007906DB /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		683E968D16B7353F007906DB /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				683E968E16B7353F007906DB /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		683E96A916B73540007906DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				683E96AA16B73540007906DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		683E96AF16B73540007906DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		683E96B016B73540007906DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		683E96B216B73540007906DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Deloitte Challenge/Deloitte Challenge-Prefix.pch";
+				INFOPLIST_FILE = "Deloitte Challenge/Deloitte Challenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		683E96B316B73540007906DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Middle Tennessee State University";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Deloitte Challenge/Deloitte Challenge-Prefix.pch";
+				INFOPLIST_FILE = "Deloitte Challenge/Deloitte Challenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "89691754-24CB-4D00-9A87-CCD71E2B34C0";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		683E96B516B73540007906DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Deloitte Challenge.app/Deloitte Challenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Deloitte Challenge/Deloitte Challenge-Prefix.pch";
+				INFOPLIST_FILE = "Deloitte ChallengeTests/Deloitte ChallengeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		683E96B616B73540007906DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Deloitte Challenge.app/Deloitte Challenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Deloitte Challenge/Deloitte Challenge-Prefix.pch";
+				INFOPLIST_FILE = "Deloitte ChallengeTests/Deloitte ChallengeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		683E966616B7353F007906DB /* Build configuration list for PBXProject "Deloitte Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				683E96AF16B73540007906DB /* Debug */,
+				683E96B016B73540007906DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		683E96B116B73540007906DB /* Build configuration list for PBXNativeTarget "Deloitte Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				683E96B216B73540007906DB /* Debug */,
+				683E96B316B73540007906DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		683E96B416B73540007906DB /* Build configuration list for PBXNativeTarget "Deloitte ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				683E96B516B73540007906DB /* Debug */,
+				683E96B616B73540007906DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		683E969016B7353F007906DB /* Deloitte_Challenge.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				683E969116B7353F007906DB /* Deloitte_Challenge.xcdatamodel */,
+			);
+			currentVersion = 683E969116B7353F007906DB /* Deloitte_Challenge.xcdatamodel */;
+			path = Deloitte_Challenge.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 683E966316B7353F007906DB /* Project object */;
+}
