@@ -9,6 +9,9 @@
 #import "CreateViewController.h"
 
 @interface CreateViewController ()
+{
+    BOOL isPad;
+}
 
 @end
 
@@ -31,6 +34,16 @@ NSString *htmlString;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        isPad = YES;
+    }
+    else
+    {
+        isPad = NO;
+    }
+    
     
     appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -74,8 +87,11 @@ NSString *htmlString;
 {
     if (tableView == startTableView)
         return 75;
+    else if (isPad)
+        return 245;
     else
         return 60;
+
 }
 
 // tells the delegate that the specified row is now selected
@@ -122,13 +138,28 @@ NSString *htmlString;
         cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         if (cell == nil)
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        
-        NSString *myString = [[appDelegate.xmlArray objectAtIndex:indexPath.row] title];
-        NSArray *myArray = [myString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"-"]];
-        cell.textLabel.text = [myArray objectAtIndex:0];
-//        cell.textLabel.text = [[appDelegate.xmlArray objectAtIndex:indexPath.row] title];
-        cell.textLabel.numberOfLines = 2;
-        cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        if (isPad)
+        {
+            UIWebView *webview = (UIWebView*)[cell viewWithTag:1];
+            NSString *urlString = [[[appDelegate.xmlArray objectAtIndex:indexPath.row]content] stringByReplacingOccurrencesOfString:@"Review of" withString:@"Review of "];
+            [webview loadHTMLString: urlString baseURL:[NSURL URLWithString:[[appDelegate.xmlArray objectAtIndex:indexPath.row]content]] ];
+            [webview setBackgroundColor:[UIColor clearColor]];
+            [webview setOpaque:NO];
+            UILabel * title = (UILabel*)[cell viewWithTag:2];
+            NSString *myString = [[appDelegate.xmlArray objectAtIndex:indexPath.row] title];
+            NSArray *myArray = [myString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"-"]];
+            title.text = [myArray objectAtIndex:0];
+            
+        }
+        else
+        {
+            NSString *myString = [[appDelegate.xmlArray objectAtIndex:indexPath.row] title];
+            NSArray *myArray = [myString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"-"]];
+            cell.textLabel.text = [myArray objectAtIndex:0];
+            //        cell.textLabel.text = [[appDelegate.xmlArray objectAtIndex:indexPath.row] title];
+            cell.textLabel.numberOfLines = 2;
+            cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        }
     }
     
     return cell;
@@ -139,6 +170,7 @@ NSString *htmlString;
 {
     return 1;
 }
+
 
 // tells the data source to return the number of rows in a given section of a table view (required)
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

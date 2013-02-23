@@ -309,7 +309,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.0" green="0.63137254899999995" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yO0-RS-mhO">
-                                    <rect key="frame" x="0.0" y="320" width="640" height="44"/>
+                                    <rect key="frame" x="0.0" y="574" width="960" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     <items>
                                         <barButtonItem title="Save New Group" id="jtt-DJ-jqW">
@@ -924,7 +924,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rFp-p6-ycy">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Ezk-4H-i1i">
-                                    <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="302" width="640" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     <items>
                                         <barButtonItem title="Send Update" id="CQC-VA-dSu">
@@ -1077,122 +1077,12 @@
         <image name="gradient.png" width="640" height="1136"/>
         <image name="order_up_logo.png" width="592" height="312"/>
     </resources>
-    <classes>
-        <class className="AddGroupTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGroupTableViewController.h"/>
-        </class>
-        <class className="CreateViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="rssTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="startTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="CurrentHostViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CurrentHostViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="endButtonPressed:"/>
-                <relationship kind="action" name="updateButtonPressed:"/>
-                <relationship kind="outlet" name="locationTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="membersTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="nameTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="timeTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="CurrentOrderUpViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CurrentOrderUpViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="notifyArrivedOrder:"/>
-                <relationship kind="action" name="notifyPlacedOrder:"/>
-                <relationship kind="outlet" name="locationTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="membersTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="nameTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="timeTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="ExistingTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExistingTableViewController.h"/>
-        </class>
-        <class className="MainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="createButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="joinButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="logo" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ordersButton" candidateClass="UIButton"/>
-                <relationship kind="outletCollection" name="buttons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MessageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MessageViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="focusOffTextField:"/>
-                <relationship kind="action" name="sendButtonPressed:"/>
-                <relationship kind="outlet" name="messageTextfield" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="titleTextfield" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PastOrdersTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PastOrdersTableViewController.h"/>
-        </class>
-        <class className="PlaceOrderViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlaceOrderViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addOrder:"/>
-                <relationship kind="action" name="myOrderHelpClicked:"/>
-                <relationship kind="outlet" name="myOrderHelp" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="orderTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="RSSViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="SaveGroupViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SaveGroupViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="gnameClicked:"/>
-                <relationship kind="action" name="saveClicked:"/>
-                <relationship kind="outlet" name="gnameButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="gnameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="memberTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="StartViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StartViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addGroup:"/>
-                <relationship kind="action" name="addMember:"/>
-                <relationship kind="action" name="doneClicked:"/>
-                <relationship kind="action" name="orderLocHelpClicked:"/>
-                <relationship kind="action" name="orderMemberHelpClicked:"/>
-                <relationship kind="action" name="orderNameHelpClicked:"/>
-                <relationship kind="action" name="orderTimeHelpClicked:"/>
-                <relationship kind="action" name="saveGroup:"/>
-                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="memberTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="orderLoc" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="orderLocHelp" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="orderMemberHelp" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="orderName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="orderNameHelp" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="orderTime" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="orderTimeHelp" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ioI-S0-e8z"/>
+        <segue reference="vfT-la-YDB"/>
     </inferredMetricsTieBreakers>
 </document>

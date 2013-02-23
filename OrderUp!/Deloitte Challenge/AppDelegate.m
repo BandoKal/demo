@@ -115,6 +115,12 @@
         {
             [pastOrders addObject:[[PastOrder alloc]initWithTitle:message andOrder:message]];
             [manager.sessionOrders removeObjectForKey:message];
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Order Has Arrived!"
+                                                           message:message
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil];
+            [alert show];
         }
             
         default:
