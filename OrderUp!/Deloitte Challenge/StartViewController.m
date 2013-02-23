@@ -281,6 +281,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     currentOrder.orderID = orderName.text;
     currentOrder.orderLocation = orderLoc.text;
     currentOrder.orderTime = orderTime.text;
+    currentOrder.members = [[NSMutableArray alloc]init];
     if (![appDelegate.manager.sessionOrders objectForKey:orderName.text])
     {
         [appDelegate.manager.sessionOrders setObject:currentOrder forKey:orderName.text];

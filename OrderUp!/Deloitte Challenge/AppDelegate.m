@@ -40,6 +40,7 @@
     
     members = [[NSMutableArray alloc] init];
     pastOrders = [[NSMutableArray alloc] init];
+    [manager.connectedPeers setObject:myMemberObject forKey:myMemberObject.memberID];
     
     return YES;
 }
@@ -110,6 +111,7 @@
                                                  cancelButtonTitle:@"OK"
                                                  otherButtonTitles:nil];
             [alert show];
+            break;
         }
             case SMOrderUpClosed:
         {

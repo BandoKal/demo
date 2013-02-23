@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "WEPopoverController.h"
 #import "WEPopoverContentViewController.h"
+#import "Order.h"
+#import "OrderUp.h"
 
 @interface PlaceOrderViewController : UIViewController
 
@@ -21,6 +23,10 @@
 - (IBAction)addOrder:(id)sender;
 
 @property (nonatomic, retain) WEPopoverController *popoverController;
+@property (strong, nonatomic) IBOutlet UILabel *orderUpNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *orderUpLocationLabel;
+@property (strong, nonatomic) NSString *orderUpName, *orderUpLocation;
+@property (strong, nonatomic) OrderUp *currentParty;
 
 
 

@@ -77,6 +77,8 @@
 		968E612B16CB43C90077F108 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E612A16CB43C90077F108 /* XMLParser.m */; };
 		968E612E16CB4C870077F108 /* DataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E612D16CB4C870077F108 /* DataFetcher.m */; };
 		969640E416D34C2900CE471D /* PlaceOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969640E316D34C2900CE471D /* PlaceOrderViewController.m */; };
+		96D98C1E16D8FB4A007A7C2A /* PlaceOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969640E316D34C2900CE471D /* PlaceOrderViewController.m */; };
+		96D98C2116D8FD79007A7C2A /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D98C2016D8FD79007A7C2A /* Order.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +193,8 @@
 		968E612D16CB4C870077F108 /* DataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFetcher.m; sourceTree = "<group>"; };
 		969640E216D34C2900CE471D /* PlaceOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceOrderViewController.h; sourceTree = "<group>"; };
 		969640E316D34C2900CE471D /* PlaceOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceOrderViewController.m; sourceTree = "<group>"; };
+		96D98C1F16D8FD79007A7C2A /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		96D98C2016D8FD79007A7C2A /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +370,8 @@
 				628F835816CBF03C00A5D29E /* FeedEntry.m */,
 				68B123F316D3315F0056F615 /* PastOrder.h */,
 				68B123F416D3315F0056F615 /* PastOrder.m */,
+				96D98C1F16D8FD79007A7C2A /* Order.h */,
+				96D98C2016D8FD79007A7C2A /* Order.m */,
 			);
 			name = "Utility Classes";
 			sourceTree = "<group>";
@@ -558,6 +564,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D98C1E16D8FB4A007A7C2A /* PlaceOrderViewController.m in Sources */,
 				683E967F16B7353F007906DB /* main.m in Sources */,
 				683E968316B7353F007906DB /* AppDelegate.m in Sources */,
 				683E969216B7353F007906DB /* Deloitte_Challenge.xcdatamodeld in Sources */,
@@ -586,6 +593,7 @@
 				9654663916D33780001AF47F /* MessageViewController.m in Sources */,
 				68B123F216D32D770056F615 /* PastOrdersTableViewController.m in Sources */,
 				68B123F516D3315F0056F615 /* PastOrder.m in Sources */,
+				96D98C2116D8FD79007A7C2A /* Order.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

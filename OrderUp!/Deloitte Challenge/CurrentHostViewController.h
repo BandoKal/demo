@@ -10,6 +10,7 @@
 #import "OrderUp.h"
 #import "AppDelegate.h"
 #import "PastOrder.h"
+#import "PlaceOrderViewController.h"
 
 @interface CurrentHostViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextView *nameTextView;
@@ -20,5 +21,6 @@
 @property (strong,nonatomic) AppDelegate *appDelegate;
 - (IBAction)updateButtonPressed:(id)sender;
 - (IBAction)endButtonPressed:(id)sender;
+- (IBAction)placeIndividualOrder:(id)sender;
 
 @end

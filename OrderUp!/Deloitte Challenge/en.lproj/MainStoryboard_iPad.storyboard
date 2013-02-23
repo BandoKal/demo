@@ -575,7 +575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WkE-on-EEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="-1358"/>
+            <point key="canvasLocation" x="2350" y="-1386"/>
         </scene>
         <!--Add Group Table View Controller-->
         <scene sceneID="3ya-9w-rkn">
@@ -606,7 +606,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAM-gy-PkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="-643"/>
+            <point key="canvasLocation" x="2850" y="-627"/>
         </scene>
         <!--Existing Table View Controller - View Current Order Ups-->
         <scene sceneID="QKb-G3-gVw">
@@ -776,7 +776,8 @@
                     <navigationItem key="navigationItem" id="uU5-ot-TVA">
                         <barButtonItem key="rightBarButtonItem" title="Add My Order" id="h9P-Jb-ZdL">
                             <connections>
-                                <segue destination="qob-BH-xKf" kind="push" id="LZ8-zi-L6t"/>
+                                <action selector="placeIndividualOrder:" destination="bEr-q2-zi1" id="hpO-9A-MZQ"/>
+                                <segue destination="qob-BH-xKf" kind="push" identifier="pushPlaceOrder" id="LZ8-zi-L6t"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -790,7 +791,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maF-Ru-ahS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446" y="64"/>
+            <point key="canvasLocation" x="1707" y="259"/>
         </scene>
         <!--Place Order View Controller-->
         <scene sceneID="x9A-s1-4Fe">
@@ -801,16 +802,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="My Order" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSZ-vS-Keg">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="PT7-CB-Cyc"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEG-6e-gob">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="18" id="cLE-9y-Nhe"/>
+                                    <constraint firstAttribute="width" constant="18" id="s8Q-tL-Pux"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
@@ -821,25 +819,25 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="myOrderHelpClicked:" destination="qob-BH-xKf" eventType="touchUpInside" id="423-hV-4aH"/>
+                                    <action selector="myOrderHelpClicked:" destination="qob-BH-xKf" eventType="touchUpInside" id="9xE-2J-cq6"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UA2-is-LbR">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="24" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UA2-is-LbR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="0zF-4r-nVP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                                <connections>
+                                    <action selector="addOrder:" destination="qob-BH-xKf" eventType="editingDidEndOnExit" id="TqM-jd-Rq7"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Order Up Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9j-RU-IHw">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="b0m-KG-Z9k"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location for order" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5s-Ea-7jH">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="2qb-Rg-gDn"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -850,36 +848,37 @@
                             <constraint firstItem="x9j-RU-IHw" firstAttribute="top" secondItem="cg4-dx-mfz" secondAttribute="top" constant="20" symbolic="YES" type="default" id="2dV-Hz-NpB"/>
                             <constraint firstItem="R5s-Ea-7jH" firstAttribute="top" secondItem="x9j-RU-IHw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3Oc-yl-4qY"/>
                             <constraint firstItem="x9j-RU-IHw" firstAttribute="leading" secondItem="cg4-dx-mfz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4vC-Bj-VcU"/>
+                            <constraint firstItem="UA2-is-LbR" firstAttribute="leading" secondItem="cg4-dx-mfz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8n2-Ax-yS7"/>
+                            <constraint firstItem="UA2-is-LbR" firstAttribute="top" secondItem="cg4-dx-mfz" secondAttribute="top" constant="117" id="A5v-eK-pP6"/>
                             <constraint firstItem="UEG-6e-gob" firstAttribute="top" secondItem="cg4-dx-mfz" secondAttribute="top" constant="80" id="B8P-QC-lY5"/>
                             <constraint firstItem="R5s-Ea-7jH" firstAttribute="leading" secondItem="cg4-dx-mfz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CCc-o4-OrD"/>
-                            <constraint firstItem="UA2-is-LbR" firstAttribute="top" secondItem="zSZ-vS-Keg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Cxb-Ad-gGK"/>
                             <constraint firstAttribute="trailing" secondItem="R5s-Ea-7jH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="OZD-el-bot"/>
                             <constraint firstAttribute="trailing" secondItem="UEG-6e-gob" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rwf-Hd-hJm"/>
                             <constraint firstAttribute="trailing" secondItem="x9j-RU-IHw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="U0X-kL-LBd"/>
-                            <constraint firstAttribute="bottom" secondItem="UA2-is-LbR" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="YYP-BR-5Ro"/>
                             <constraint firstItem="zSZ-vS-Keg" firstAttribute="leading" secondItem="cg4-dx-mfz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eYx-Nz-bJH"/>
-                            <constraint firstAttribute="trailing" secondItem="UA2-is-LbR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gr9-OT-071"/>
+                            <constraint firstAttribute="trailing" secondItem="UA2-is-LbR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="iA9-ik-Iik"/>
                             <constraint firstItem="zSZ-vS-Keg" firstAttribute="top" secondItem="R5s-Ea-7jH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mY1-Yg-w00"/>
-                            <constraint firstItem="UA2-is-LbR" firstAttribute="leading" secondItem="cg4-dx-mfz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uLB-tH-70w"/>
-                            <constraint firstItem="UEG-6e-gob" firstAttribute="leading" secondItem="zSZ-vS-Keg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zth-fY-bne"/>
+                            <constraint firstItem="UEG-6e-gob" firstAttribute="leading" secondItem="zSZ-vS-Keg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qG7-Bx-Oxr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9fa-Dh-hhH">
                         <barButtonItem key="rightBarButtonItem" title="Add My Order" id="eSw-Ua-02i">
                             <connections>
-                                <action selector="addOrder:" destination="qob-BH-xKf" id="sv7-qR-rIC"/>
+                                <action selector="addOrder:" destination="qob-BH-xKf" id="Fpy-IW-Ucv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <connections>
-                        <outlet property="myOrderHelp" destination="UEG-6e-gob" id="MJZ-rt-Dep"/>
+                        <outlet property="myOrderHelp" destination="UEG-6e-gob" id="Eu2-vl-YDa"/>
                         <outlet property="orderTextField" destination="UA2-is-LbR" id="o9k-dh-yEE"/>
+                        <outlet property="orderUpLocationLabel" destination="R5s-Ea-7jH" id="iXo-su-N64"/>
+                        <outlet property="orderUpNameLabel" destination="x9j-RU-IHw" id="OI0-1D-4Xd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYP-x4-dCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1851" y="66"/>
+            <point key="canvasLocation" x="2723" y="259"/>
         </scene>
         <!--Past Orders Table View Controller - View My Past Orders-->
         <scene sceneID="yL1-P6-ihO">
@@ -1048,7 +1047,8 @@
                     <navigationItem key="navigationItem" id="b5D-QE-rIb">
                         <barButtonItem key="rightBarButtonItem" title="Add My Order" id="tPd-LI-Qj2">
                             <connections>
-                                <segue destination="qob-BH-xKf" kind="push" id="6ax-DO-NoT"/>
+                                <action selector="placeIndividualOrder:" destination="VFZ-zK-xhP" id="7lg-ow-Ra9"/>
+                                <segue destination="qob-BH-xKf" kind="push" identifier="pushPlaceOrder" id="6ax-DO-NoT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1062,7 +1062,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBA-yY-xEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446" y="729"/>
+            <point key="canvasLocation" x="1774" y="1257"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="EgR-OF-J8R">
@@ -1111,129 +1111,19 @@
                 </navigationItem>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAc-43-7cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1851" y="730"/>
+            <point key="canvasLocation" x="2607" y="1162"/>
         </scene>
     </scenes>
     <resources>
         <image name="gradient.png" width="640" height="1136"/>
         <image name="order_up_logo.png" width="592" height="312"/>
     </resources>
-    <classes>
-        <class className="AddGroupTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGroupTableViewController.h"/>
-        </class>
-        <class className="CreateViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="rssTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="startTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="CurrentHostViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CurrentHostViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="endButtonPressed:"/>
-                <relationship kind="action" name="updateButtonPressed:"/>
-                <relationship kind="outlet" name="locationTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="membersTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="nameTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="timeTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="CurrentOrderUpViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CurrentOrderUpViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="notifyArrivedOrder:"/>
-                <relationship kind="action" name="notifyPlacedOrder:"/>
-                <relationship kind="outlet" name="locationTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="membersTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="nameTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="timeTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="ExistingTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExistingTableViewController.h"/>
-        </class>
-        <class className="MainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="createButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="joinButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="logo" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ordersButton" candidateClass="UIButton"/>
-                <relationship kind="outletCollection" name="buttons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MessageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MessageViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="focusOffTextField:"/>
-                <relationship kind="action" name="sendButtonPressed:"/>
-                <relationship kind="outlet" name="messageTextfield" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="titleTextfield" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PastOrdersTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PastOrdersTableViewController.h"/>
-        </class>
-        <class className="PlaceOrderViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlaceOrderViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addOrder:"/>
-                <relationship kind="action" name="myOrderHelpClicked:"/>
-                <relationship kind="outlet" name="myOrderHelp" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="orderTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="RSSViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="SaveGroupViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SaveGroupViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="gnameClicked:"/>
-                <relationship kind="action" name="saveClicked:"/>
-                <relationship kind="outlet" name="gnameButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="gnameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="memberTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="StartViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StartViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addGroup:"/>
-                <relationship kind="action" name="addMember:"/>
-                <relationship kind="action" name="doneClicked:"/>
-                <relationship kind="action" name="orderLocHelpClicked:"/>
-                <relationship kind="action" name="orderMemberHelpClicked:"/>
-                <relationship kind="action" name="orderNameHelpClicked:"/>
-                <relationship kind="action" name="orderTimeHelpClicked:"/>
-                <relationship kind="action" name="saveGroup:"/>
-                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="memberTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="orderLoc" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="orderLocHelp" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="orderMemberHelp" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="orderName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="orderNameHelp" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="orderTime" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="orderTimeHelp" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6ax-DO-NoT"/>
+        <segue reference="LZ8-zi-L6t"/>
     </inferredMetricsTieBreakers>
 </document>

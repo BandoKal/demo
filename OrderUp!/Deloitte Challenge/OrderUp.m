@@ -11,12 +11,21 @@
 @implementation OrderUp
 @synthesize orderID,orderOwner,orderText;
 @synthesize orderTitle, orderLocation, orderTime;
-@synthesize members;
+@synthesize members,individualOrders;
 
 -(NSString*)getStringOfOrderUp:(OrderUp *) party
 {
     NSString *string = [NSString stringWithFormat:@"%@|%@|%@", orderID, orderOwner.peerID, orderText];
     return string;
+}
+
+-(id)init
+{
+    if (self = [super init])
+    {
+        individualOrders = [[NSMutableDictionary alloc]init];
+    }
+    return  self;
 }
 
 @end

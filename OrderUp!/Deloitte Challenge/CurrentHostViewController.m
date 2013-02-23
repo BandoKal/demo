@@ -10,7 +10,7 @@
 
 @interface CurrentHostViewController ()
 {
-    NSArray *memberKeys;
+    NSMutableArray *memberKeys;
 }
 @end
 
@@ -25,7 +25,13 @@
     self.timeTextView.text = self.currentOrder.orderTime;
     self.membersTableView.dataSource = self;
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    memberKeys = [appDelegate.manager.connectedPeers allKeys];
+    memberKeys = [[appDelegate.manager.connectedPeers allKeys]mutableCopy];
+    self.currentOrder = [appDelegate.manager.sessionOrders objectForKey:self.currentOrder.orderID];
+ 
+    [memberKeys addObject:appDelegate.myMemberObject.memberID];
+    [self.currentOrder.members addObject:appDelegate.myMemberObject];
+
+    [self.membersTableView reloadData];
     
 }
 
@@ -33,6 +39,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void) viewWillAppear:(BOOL)animated
+{
+    [self.membersTableView reloadData];
 }
 
 
@@ -62,7 +72,8 @@
     
     // Configure the cell...
     cell.textLabel.text = [[appDelegate.manager.connectedPeers objectForKey:[memberKeys objectAtIndex:indexPath.row]]name];
-    cell.detailTextLabel.text = nil;// will display members orders
+    cell.detailTextLabel.text =  [[[self.currentOrder individualOrders] objectForKey:[memberKeys objectAtIndex:indexPath.row]] orderText] ;// will display member orders
+    
     return cell;
 }
 
@@ -86,5 +97,22 @@
                                          otherButtonTitles: nil];
     [alert show];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)placeIndividualOrder:(id)sender {
+
+    [self performSegueWithIdentifier:@"pushPlaceOrder" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"pushPlaceOrder"])
+    {
+        PlaceOrderViewController *next = [segue destinationViewController];
+        next.orderUpName  = [[NSString alloc]initWithString: self.currentOrder.orderID];
+        NSLog(@"%@", self.currentOrder.orderID);
+        next.orderUpLocation = [[NSString alloc]initWithString: self.currentOrder.orderLocation];
+        next.currentParty = self.currentOrder;
+    }
 }
 @end

@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) NSString *orderTitle, *orderLocation, *orderTime;
 @property (strong, nonatomic) NSMutableArray *members;
-
+@property (strong, nonatomic) NSMutableDictionary *individualOrders;
 -(NSString*)getStringOfOrderUp:(OrderUp *) party;
 
 @end

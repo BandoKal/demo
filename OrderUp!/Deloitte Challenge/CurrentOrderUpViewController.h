@@ -10,6 +10,7 @@
 #import "OrderUp.h"
 #import "Member.h"
 #import "AppDelegate.h"
+#import "PlaceOrderViewController.h"
 
 @interface CurrentOrderUpViewController : UIViewController <UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITextView *nameTextView;
@@ -21,5 +22,6 @@
 
 - (IBAction)notifyPlacedOrder:(id)sender;
 - (IBAction)notifyArrivedOrder:(id)sender;
+- (IBAction)placeIndividualOrder:(id)sender;
 
 @end

@@ -16,6 +16,7 @@
 @synthesize orderTextField,myOrderHelp;
 @synthesize appDelegate;
 @synthesize popoverController;
+@synthesize orderUpName,orderUpLocation,currentParty;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.orderUpLocationLabel.text = orderUpLocation;
+    NSLog(@"place order --> %@", orderUpName);
+    self.orderUpNameLabel.text = orderUpName;
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
 }
 
@@ -65,8 +68,14 @@
 
 }
 
-- (IBAction)addOrder:(id)sender {
-    // save order here
+- (IBAction)addOrder:(id)sender
+{
+    Order *newOrder = [[Order alloc]init];
+    newOrder.orderText = orderTextField.text;
+    newOrder.orderOwner = appDelegate.myMemberObject;
+    newOrder.orderUpParty = currentParty;
+    [[[appDelegate.manager.sessionOrders objectForKey:currentParty.orderID] individualOrders] setObject:newOrder forKey:newOrder.orderOwner.memberID];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

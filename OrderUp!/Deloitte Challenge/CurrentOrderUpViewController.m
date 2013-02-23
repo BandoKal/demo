@@ -10,7 +10,7 @@
 
 @interface CurrentOrderUpViewController ()
 {
-    NSArray *memberKeys;
+    NSMutableArray *memberKeys;
 }
 
 @end
@@ -27,7 +27,9 @@
     self.timeTextView.text = self.currentOrder.orderTime;
     self.membersTableView.dataSource = self;
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    memberKeys = [appDelegate.manager.connectedPeers allKeys];
+    memberKeys = [[appDelegate.manager.connectedPeers allKeys]mutableCopy];
+    NSLog(@"memberID = %@", appDelegate.myMemberObject.memberID);
+    [memberKeys addObject:appDelegate.myMemberObject.memberID];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,6 +37,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    [self.membersTableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -61,7 +69,7 @@
     
     // Configure the cell...
     cell.textLabel.text = [[appDelegate.manager.connectedPeers objectForKey:[memberKeys objectAtIndex:indexPath.row]]name];
-    cell.detailTextLabel.text = nil;// will display members orders
+    cell.detailTextLabel.text =  [[[self.currentOrder individualOrders] objectForKey:[memberKeys objectAtIndex:indexPath.row]] orderText] ;// will display members orders
     return cell;
 }
 
@@ -81,5 +89,22 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notification Sent" message:@"You have successfully notified all members the order has arrived." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
 }
+
+- (IBAction)placeIndividualOrder:(id)sender {
+    [self performSegueWithIdentifier:@"pushPlaceOrder" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"pushPlaceOrder"])
+    {
+        PlaceOrderViewController *next = [segue destinationViewController];
+        next.orderUpName  = self.currentOrder.orderID;
+        NSLog(@"%@", self.currentOrder.orderID);
+        next.orderUpLocation = self.currentOrder.orderLocation;
+        next.currentParty = self.currentOrder;
+    }
+}
+
 
 @end
